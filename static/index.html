@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Only Connect -- Post and Join Get Out the Vote Events</title>
+  <link href="index.css" rel="stylesheet">
+  <link href="float-grid.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <nav>
+    <div id="header">
+      <span id="home-logo"><i class="fas fa-clipboard-list"></i></span>
+      <span id="nav-options"><a>Create an Event</a>|<a>Browse Events</a>|<a>My Events</a></span>
+    </div>
+  </nav>
+  <header role="banner">
+    <h1>Only Connect</h1>
+  </header> 
+  <main role="main">
+    <div class="row">
+      <div class="login-page block-item">
+        <h2>Only Connect</h2>
+        <h3>Post and Join Get Out the Vote Events</h3>
+        <fieldset>
+        <form class="login-form">
+          <label for="username">User Name</label><br>
+          <input type="text" name="username"><br>
+          <label for="password">Password</label><br>
+          <input type="password" name="password"><br><br>
+          <button type="submit" class="login">Current Users, Sign In</button><br><br>
+          <a href="#" id="new-account">Click Here To Create a Free Account</a>
+          <p>Test Login: testuser; Test Password: testpassword</p>
+        </form>
+      </fieldset>
+    </div>
+    <div class="row">
+      <div class="new-account-page">
+        <fieldset>
+          <form class="create-account-form block-item">
+            <label for="firstName">First Name</label><br>
+            <input type="text" name="firstName"><br><br>
+            <label for="lastName">Last Name</label><br>
+            <input type="text" name="lastName"><br><br>
+            <label for="requestedUsername">Requested User Name</label><br>
+            <input type="text" name="requestedUsername"><br>
+            <label for="requestedPassword">Password</label><br>
+            <input type="password" name="requestedPassword"><br><br>
+            <button type="submit" class="create-account">Create Account</button><br>
+          </form>
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+      <div class="create-an-event block-item">
+        <h2>Create a GOTV Event</h2>
+        <fieldset>
+          <form class="create-an-event-form block-item">
+            <label for="event-title">Event Title</label><br>          
+            <input type="text" name="event-title"><br><br>
+            <label for="event-description">Description</label><br>
+            <input type="text" name="event-description"><br><br>
+            <label for="event-date">Date</label><br>
+            <input type="text" name="event-date"><br><br>
+            <label for="event-start-time">Start Time</label><br>
+            <input type="text" name="event-start-time"><br><br>
+            <label for="event-end-time">End Time</label><br>
+            <input type="text" name="event-end-time"><br><br>
+            <button type="submit" class="new-review">Create!</button><br><br>
+          </form>
+        </fieldset>
+      </div>
+    </div>
+    <div class="browse-events block-item">
+      <div class="row"></div>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
