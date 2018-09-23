@@ -115,6 +115,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.add-new-wine, .create-account-form, .js-full-review, .edit-review, .edit-wine {
+.add-new-wine, .js-full-review, .edit-review, .edit-wine {
   display: none;
 }
