@@ -1,0 +1,12 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: AwmL0xbcQE/3aYAS+dagmJi4bZ62i7cHcuL8QuFS92tZ1i3lfu0csMcAGpx5Bn2X/f03u9pp0CkTCh3zwaDv11ueWvrwr9rYTv68PqrKqLi8yMqmNwPtko0/Pl5BU/pgzTBHWleYclyzBcrIUg1iZehE9bN0LbVH/QZ+5Y36bgdncdJIy91LxZhziW3cNijmR6Ws2++9coWZUxAJoMA0JGAMClPYgg23woTxbGpen9jex4uvot0MmDz5a6QQ56We/1serNhlRs/QnShq1cAh7xndC3Yn2KjEU85KTVz6Y9Ps3kmpIUUNu0oTlpal/lFMvEc6y0x9/rgTy1/Zwp7RzFwERTj7Qqyw+8q6YA2W2lJrx0iF3Hs/T80g+/wg9msAFK5mW00fRN9mA5NbTXR+/WaCYX6SosRUgrobIaYjdfHNvaeqV8DKbvX6/FUhuL3KXkTabsLFrnNaOBJc991jtGMmCZ2V2IbypqgPn+QfwE1ZNzlMRF1moFEbw2nLs4nPP1Hbwo+3bjGgrU+n+/i2EY91GZb+2IRR0263zfGwkqP4j53SQYzLsZ8Y0uzCEqNM6RcjPD4tnXBUg0btx/uc5u6N8wmbu/sX0LDInVViCelRs4lnFGApuSLdyWNZ51MZHwq0TsxbBubBt/xyGk9aj4gFPF/T5hBpgej3ohzxmmo=
+  app: guarded-shelf-30719
+  on:
+    repo: mcgrathprj/only-connect
