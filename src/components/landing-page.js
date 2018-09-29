@@ -14,7 +14,7 @@ export function LandingPage(props) {
         <div className="home">
             <h2>Welcome to GotV App</h2>
             <LoginForm />
-            <Link to="/register">Register</Link>
+            <Link to="/register">Create an Account</Link>
         </div>
     );
 }
