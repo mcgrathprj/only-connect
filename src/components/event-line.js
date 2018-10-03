@@ -10,8 +10,8 @@ export class EventLine extends React.Component {
 
     render() {
         return (
-            <li>
-            </li>
+            <span>{props.date}: {props.title}
+            </span>
         );
     }
 }
