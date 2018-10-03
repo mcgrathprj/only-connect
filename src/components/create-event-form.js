@@ -1,6 +1,9 @@
 import React from 'react';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export class CreateEventForm extends React.Component {
     onSubmit(values) {
@@ -22,61 +25,61 @@ export class CreateEventForm extends React.Component {
                     this.onSubmit(values)
                 )}>
                 {error}
-                <label htmlFor="event-title">Title of Event</label>
+                <label htmlFor="title">Title of Event</label>
                 <Field
                     component={Input}
                     type="text"
-                    name="event-title"
-                    id="event-title"
+                    name="title"
+                    id="title"
                     validate={[required, nonEmpty]}
                 />
-                <label htmlFor="event-description">Description</label>
+                <label htmlFor="description">Description</label>
                 <Field
                     component={Input}
                     type="text"
-                    name="event-description"
-                    id="event-description"
+                    name="description"
+                    id="description"
                     validate={[required, nonEmpty]}
                 />                
                 <label htmlFor="event-location">Location</label>
                 <Field
                     component={Input}
                     type="text"
-                    name="event-location"
-                    id="event-location"
+                    name="location"
+                    id="location"
                     validate={[required, nonEmpty]}
                 />
-                <label htmlFor="event-time">Time</label>
+                <label htmlFor="time">Date</label>
+                <Field
+                    component={Input}
+                    type="date"
+                    name="date"
+                    id="date"
+                    validate={[required, nonEmpty]}
+                />
+                <label htmlFor="start-time">Start Time</label>
                 <Field
                     component={Input}
                     type="time"
-                    name="event-time"
-                    id="event-time"
-                    validate={[required, nonEmpty]}
-                />
-                <label htmlFor="event-start-time">Start Time</label>
-                <Field
-                    component={Input}
-                    type="time"
-                    name="event-start-time"
-                    id="event-start-time"
+                    name="start-time"
+                    id="start-time"
                     validate={[required, nonEmpty]}
                 />
 
-                <label htmlFor="event-end-time">End Time</label>
+                <label htmlFor="end-time">End Time</label>
                 <Field
                     component={Input}
                     type="time"
-                    name="event-end-time"
-                    id="event-end-time"
+                    name="end-time"
+                    id="end-time"
                     validate={[required, nonEmpty]}
                 />
-                <label htmlFor="event-volunteers-needed">Number of Volunteers Needed</label>
+                <label htmlFor="capacity">Number of Volunteers Needed</label>
                 <Field
                     component={Input}
-                    type="time"
-                    name="event-volunteers-needed"
-                    id="event-volunteers-needed"
+                    type="number"
+                    name="capacity"
+                    id="capacity"
                     validate={[required, nonEmpty]}
                 />
                 <button disabled={this.props.pristine || this.props.submitting}>

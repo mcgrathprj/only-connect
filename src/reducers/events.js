@@ -5,7 +5,20 @@ import {
 
 const initialState = {
     data: '',
-    error: null
+    error: null,
+    events: [
+        {
+            title: "",
+            description: "",
+            location: "",
+            date: "",
+            start_time: "",
+            end_time: "",
+            capacity: 50,
+            attendees: [] 
+        },
+
+    ]
 };
 
 export default function reducer(state = initialState, action) {

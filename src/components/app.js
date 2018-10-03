@@ -7,8 +7,9 @@ import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
-import EventsLists from './events-list';
+import EventsList from './events-list';
 import EventDetail from '.event-detail';
+import CreateEventForm from './create-event-form';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
