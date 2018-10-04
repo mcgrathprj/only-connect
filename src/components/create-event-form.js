@@ -41,7 +41,7 @@ export class CreateEventForm extends React.Component {
                     id="description"
                     validate={[required, nonEmpty]}
                 />                
-                <label htmlFor="event-location">Location</label>
+                <label htmlFor="location">Location</label>
                 <Field
                     component={Input}
                     type="text"
@@ -49,7 +49,7 @@ export class CreateEventForm extends React.Component {
                     id="location"
                     validate={[required, nonEmpty]}
                 />
-                <label htmlFor="time">Date</label>
+                <label htmlFor="date">Date</label>
                 <Field
                     component={Input}
                     type="date"

@@ -40,9 +40,6 @@ const initialState = {
             capacity: 8,
             attendees: ["claudiak", "daisyg", "marlene", "andeeee", "toddirl"] 
         }
-
-
-
     ]
 };
 
