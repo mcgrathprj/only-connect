@@ -5,7 +5,7 @@ import {fetchProtectedData} from '../actions/protected-data';
 import {EventLine} from './event-line';
 
 
-export class EventsList extends React.Component {
+class EventsList extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
     }
@@ -24,3 +24,9 @@ export class EventsList extends React.Component {
 
     }
 }
+
+const mapStateToProps = state => ({
+  event: state.events.currentEvent
+})
+
+export default connect(mapStateToProps)(EventsList)

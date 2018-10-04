@@ -4,7 +4,7 @@ import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
 import {InteractionOptions} from './interaction-options'
 
-export class EventLine extends React.Component {
+class EventLine extends React.Component {
     render() {
         return (
             <span>{this.props.event.date}: {this.props.event.title}
@@ -13,3 +13,9 @@ export class EventLine extends React.Component {
         );
     }
 }
+
+const mapStateToProps = state => ({
+  event: state.events.currentEvent
+})
+
+export default connect(mapStateToProps)(EventLine)
