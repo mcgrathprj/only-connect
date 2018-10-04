@@ -15,5 +15,12 @@ export class EventsList extends React.Component {
         <li key="index">
           <EventLine event = {event} />
         </li>
+
+      return (
+        <ul>
+          {events}
+        </ul>
+      )
+
     }
 }

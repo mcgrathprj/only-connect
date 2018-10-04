@@ -2,15 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import {InteractionOptions} from './interaction-options'
 
 export class EventLine extends React.Component {
-    componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
-    }
-
     render() {
         return (
-            <span>{props.date}: {props.title}
+            <span>{this.props.event.date}: {this.props.event.title}
+              <InteractionOptions event="this.event" />
             </span>
         );
     }

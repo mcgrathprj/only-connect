@@ -50,30 +50,33 @@ export class CreateEventForm extends React.Component {
                     validate={[required, nonEmpty]}
                 />
                 <label htmlFor="date">Date</label>
-                <Field
-                    component={Input}
-                    type="date"
-                    name="date"
-                    id="date"
-                    validate={[required, nonEmpty]}
-                />
-                <label htmlFor="start-time">Start Time</label>
-                <Field
-                    component={Input}
-                    type="time"
-                    name="start-time"
-                    id="start-time"
-                    validate={[required, nonEmpty]}
+                <DatePicker
+                    selected={this.state.date}
+                    onChange={this.handleChange}
                 />
 
-                <label htmlFor="end-time">End Time</label>
-                <Field
-                    component={Input}
-                    type="time"
-                    name="end-time"
-                    id="end-time"
-                    validate={[required, nonEmpty]}
+                <label htmlFor="start_time">Start Time</label>
+                <DatePicker
+                    selected={this.state.start_time}
+                    onChange={this.handleChange}
+                    showTimeSelect
+                    showTimeSelectOnly
+                    timeIntervals={15}
+                    dateFormat="LT"
+                    timeCaption="Time"
                 />
+
+                <label htmlFor="end_time">End Time</label>
+                <DatePicker
+                    selected={this.state.end_time}
+                    onChange={this.handleChange}
+                    showTimeSelect
+                    showTimeSelectOnly
+                    timeIntervals={15}
+                    dateFormat="LT"
+                    timeCaption="Time"
+                />
+
                 <label htmlFor="capacity">Number of Volunteers Needed</label>
                 <Field
                     component={Input}
