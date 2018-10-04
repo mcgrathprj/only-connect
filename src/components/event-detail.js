@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import InteractionOptions fron './interaction-options';
 
 export class EventDetail extends React.Component {
     componentDidMount() {
@@ -22,7 +23,6 @@ export class EventDetail extends React.Component {
               <ul>
                 {props.attendees}
               <ul>
-//need to write component for allowing you to sign up, edit the event, delete the event, or opt out of the event
               {InteractionOptions}
             </div>
         );
