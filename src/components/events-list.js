@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
-import {EventLine} from './event-line';
+import EventLine from './event-line';
 
 
 class EventsList extends React.Component {
@@ -15,6 +15,7 @@ class EventsList extends React.Component {
         <li key="index">
           <EventLine event = {event} />
         </li>
+      )
 
       return (
         <ul>

@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
-import InteractionOptions fron './interaction-options';
+import InteractionOptions from './interaction-options';
 
 class EventDetail extends React.Component {
     componentDidMount() {
@@ -16,8 +16,8 @@ class EventDetail extends React.Component {
               <p>{this.props.event.organizer}</p>
               <p>{this.props.event.location}</p>
               <p>{this.props.event.date}</p>
-              <p>Starts: {this.props.event.start-time}</p>
-              <p>Ends: {this.props.event.end-time}</p>
+              <p>Starts: {this.props.event.start_time}</p>
+              <p>Ends: {this.props.event.end_time}</p>
               <p>Volunteers Needed: {this.props.event.capacity}</p>
               <p>Attendees</p>
               <ul>

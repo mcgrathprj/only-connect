@@ -8,7 +8,7 @@ import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
 import EventsList from './events-list';
-import EventDetail from '.event-detail';
+import EventDetail from './event-detail';
 import CreateEventForm from './create-event-form';
 
 export class App extends React.Component {

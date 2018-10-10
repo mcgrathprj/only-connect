@@ -4,6 +4,7 @@ import Input from './input';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
+import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 
 export class CreateEventForm extends React.Component {
     onSubmit(values) {
