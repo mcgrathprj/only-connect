@@ -5,7 +5,7 @@ import {
     FETCH_MY_EVENTS_SUCCESS,
     FETCH_ALL_EVENTS_ERROR,
     FETCH_MY_EVENTS_ERROR
-} from '../actions/protected-data';
+} from '../actions/events';
 
 const initialState = {
     data: '',
@@ -49,15 +49,26 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-    if (action.type === FETCH_PROTECTED_DATA_SUCCESS) {
+    if (action.type === FETCH_ALL_EVENTS_SUCCESS) {
         return Object.assign({}, state, {
             data: action.data,
             error: null
         });
-    } else if (action.type === FETCH_PROTECTED_DATA_ERROR) {
+    } else if (action.type === FETCH_ALL_EVENTS_ERROR) {
+        return Object.assign({}, state, {
+            error: action.error
+        });
+    } else if (action.type === FETCH_MY_EVENTS_SUCCESS) {
+        return Object.assign({}, state, {
+            data: action.data,
+            error: null
+        });
+    } else if (action.type === FETCH_MY_EVENTS_ERROR) {
         return Object.assign({}, state, {
             error: action.error
         });
     }
+
+
     return state;
 }

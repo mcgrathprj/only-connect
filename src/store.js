@@ -12,6 +12,7 @@ const store = createStore(
         auth: authReducer,
         events: eventsReducer
     }),
+    window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION(),
     applyMiddleware(thunk)
 );
 
