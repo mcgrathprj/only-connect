@@ -20,7 +20,7 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <span id="home-logo"><i class="fas fa-clipboard-list"></i></span>
+                <span id="home-logo"><i className="fas fa-clipboard-list"></i></span>
                 <span id="nav-options"><a>Create an Event</a>|<a>Browse Events</a>|<a>My Events</a></span>
                 {logOutButton}
             </div>

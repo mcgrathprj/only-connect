@@ -1,11 +1,16 @@
 import {
     FETCH_PROTECTED_DATA_SUCCESS,
-    FETCH_PROTECTED_DATA_ERROR
+    FETCH_PROTECTED_DATA_ERROR,
+    FETCH_ALL_EVENTS_SUCCESS,
+    FETCH_MY_EVENTS_SUCCESS,
+    FETCH_ALL_EVENTS_ERROR,
+    FETCH_MY_EVENTS_ERROR
 } from '../actions/protected-data';
 
 const initialState = {
     data: '',
     error: null,
+    currentEvent: null,
     events: [
         {
             organizer: "peterm",

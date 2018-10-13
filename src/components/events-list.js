@@ -1,13 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
+import {fetchAllEvents} from '../actions/events';
 import EventLine from './event-line';
 
 
 class EventsList extends React.Component {
     componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
+        this.props.dispatch(fetchAllEvents());
     }
 
     render() {
@@ -27,7 +27,7 @@ class EventsList extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  event: state.events.currentEvent
+  events: state.events.events
 })
 
 export default connect(mapStateToProps)(EventsList)
