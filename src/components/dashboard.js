@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import {myEvents} from './my-events';
 import './dashboard.css';
 
 export class Dashboard extends React.Component {
@@ -12,12 +13,10 @@ export class Dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
-                </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
+                <div className="dashboard-name"><h2>Welcome {this.props.name}!</h2></div>
                 <div className="dashboard-protected-data">
-                    My Events: {this.props.protectedData}
+                   <h2>My Events</h2> 
+                   <myEvents/>
                 </div>
             </div>
         );

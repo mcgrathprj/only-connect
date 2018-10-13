@@ -1,9 +1,5 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
-  height: 100%; 
-}
 
-nav {
+#nav-options {
   font-family: 'Fjalla One', sans-serif;
   color: #FFFFFF;
   background-color: #3F69AA;
@@ -14,81 +10,9 @@ nav {
 
 .fas {
   font-size: 300%;
+  color: #3F69AA;
 }
 
-header, h1, h2, h3, form {
-  text-align: center;
-}
-
-h2 {
-  color: #BD3D3A;
-}
-
-.back {
-  float: left;
-  margin-left: 30px;
-  color: #FFFFFF
-}
-
-fieldset {
-  border: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-legend {
-  font-size: 200%;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.block-item {
-  display: block; 
-  background-color: white;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 12px;
-}
-
-.create-account-form {
-  padding-top: 10px;
-  padding-bottom: 10px
-}
-
-h2 {
-  padding-top: 20px;
-}
-
-.home-options {
-  padding-top: 10px;
-  padding-bottom: 10px
-}
-
-button {
-  background-color: #3F69AA;
-  border: 5px solid #3F69AA;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 6pt;
-  color: #FFFFFF;
-}
-
-input {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-li {
-  list-style: none;
-}
-
-a:link {
-  color: #0157ae;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.header-bar {
+  width: 100%
 }
