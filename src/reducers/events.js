@@ -43,7 +43,7 @@ const initialState = {
             start_time: "18:00",
             end_time: "20:00",
             capacity: 8,
-            attendees: ["claudiak", "daisyg", "marlene", "andeeee", "toddirl"] 
+            attendees: ["claudiak", "daisyg", "marlene", "andeeee", "toddirl", "hubbell"] 
         }
     ]
 };
