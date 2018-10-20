@@ -1,6 +1,18 @@
 
 #nav-options {
   font-family: 'Fjalla One', sans-serif;
+}
+
+.fas {
+  font-size: 300%;
+  color: #FFFFFF;
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.header-bar {
+  width: 100%;
+  font-family: 'Fjalla One', sans-serif;
   color: #FFFFFF;
   background-color: #3F69AA;
   padding-left: 10px;
@@ -8,11 +20,9 @@
   padding-bottom: 10px;
 }
 
-.fas {
-  font-size: 300%;
-  color: #3F69AA;
-}
-
-.header-bar {
-  width: 100%
+#logout {
+  position: absolute;
+  right: 0;
+  border-color: #FFFFFF;
+  border-width: 1px
 }
