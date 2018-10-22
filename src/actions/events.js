@@ -15,7 +15,7 @@ export const fetchAllEventsError = error => ({
 
 export const fetchAllEvents = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/api/events`, {
+    return fetch(`${API_BASE_URL}/events`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
@@ -45,7 +45,7 @@ export const fetchMyEventsError = error => ({
 export const fetchMyEvents = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     const currentUser = getState().auth.currentUser.username;
-    return fetch(`${API_BASE_URL}/api/events/${currentUser}`, {
+    return fetch(`${API_BASE_URL}/events/${currentUser}`, {
         method: 'GET',
         headers: {
             // Provide our auth token as credentials
