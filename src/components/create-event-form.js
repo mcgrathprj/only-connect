@@ -96,5 +96,5 @@ export class CreateEventForm extends React.Component {
 
 export default reduxForm({
     form: 'create-event',
-    onSubmitFail: (errors, dispatch) => dispatch(focus('login', 'username'))
+    onSubmitFail: (errors, dispatch) => dispatch(focus('title', 'location', 'date', 'start_time', 'end_time', 'capacity'))
 })(CreateEventForm);
