@@ -2,6 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {clearAuth} from '../actions/auth';
 import {clearAuthToken} from '../local-storage';
+import CreateEventForm from './create-event-form';
+import EventsList from './events-list';
+import MyEvents from './my-events';
+
 import './header-bar.css';
 
 export class HeaderBar extends React.Component {
@@ -20,8 +24,12 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <span id="home-logo"><i className="fas fa-clipboard-list"></i></span>
-                <span id="nav-options"><a>Create an Event</a>|<a>Browse Events</a>|<a>My Events</a></span>
+                <span id="home-logo"><i className="fas fa-clipboard-list" onClick={() => this.GoHome()}></i></span>
+                <span id="nav-options">
+                    <a onClick={() => this.render(<CreateEventForm/>)}>Create an Event</a>|
+                    <a onClick={() => this.render(<EventsList/>)}>Browse Events</a>|
+                    <a onClick={() => this.render(<MyEvents/>)}>My Events</a>
+                </span>
                 {logOutButton}
             </div>
         );
