@@ -22,12 +22,12 @@ export const fetchAllEvents = () => (dispatch, getState) => {
             Authorization: `Bearer ${authToken}`
         }
     })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({data}) => dispatch(fetchAllEventsSuccess(data)))
-        .catch(err => {
-            dispatch(fetchAllEventsError(err));
-        });
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(({data}) => dispatch(fetchAllEventsSuccess(data)))
+    .catch(err => {
+        dispatch(fetchAllEventsError(err));
+    });
 };
 
 export const FETCH_MY_EVENTS_SUCCESS = 'FETCH_MY_EVENTS_SUCCESS';
@@ -52,10 +52,10 @@ export const fetchMyEvents = () => (dispatch, getState) => {
             Authorization: `Bearer ${authToken}`
         }
     })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({data}) => dispatch(fetchMyEventsSuccess(data)))
-        .catch(err => {
-            dispatch(fetchMyEventsError(err));
-        });
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(({data}) => dispatch(fetchMyEventsSuccess(data)))
+    .catch(err => {
+        dispatch(fetchMyEventsError(err));
+    });
 };
