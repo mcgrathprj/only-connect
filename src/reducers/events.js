@@ -12,8 +12,9 @@ const initialState = {
     events: [],
     error: null,
     currentEvent: null,
-    eventStart: null,
-    eventEnd: null
+    eventStartDate: null,
+    eventStartTime: null,
+    eventEndTime: null
 };
 
 export default function reducer(state = initialState, action) {

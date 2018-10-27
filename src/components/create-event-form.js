@@ -58,7 +58,7 @@ export class CreateEventForm extends React.Component {
 
                 <label htmlFor="start_time">Start Time</label>
                 <DatePicker
-                    selected={this.state.start_time}
+                    selected={this.props.startTime}
                     onChange={this.handleChange}
                     showTimeSelect
                     showTimeSelectOnly
@@ -69,7 +69,7 @@ export class CreateEventForm extends React.Component {
 
                 <label htmlFor="end_time">End Time</label>
                 <DatePicker
-                    selected={this.state.end_time}
+                    selected={this.props.endTime}
                     onChange={this.handleChange}
                     showTimeSelect
                     showTimeSelectOnly
