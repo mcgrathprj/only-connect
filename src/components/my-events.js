@@ -10,7 +10,7 @@ class MyEvents extends React.Component {
 
     render() {
       const myEvents = this.props.events.map((event, index) => 
-        <li key={index} event = {event} />
+        <li key={index}>{event.title}</li>
       )
 
       return (

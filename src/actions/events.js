@@ -24,7 +24,7 @@ export const fetchAllEvents = () => (dispatch, getState) => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(({data}) => dispatch(fetchAllEventsSuccess(data)))
+    .then(res => dispatch(fetchAllEventsSuccess(res)))
     .catch(err => {
         dispatch(fetchAllEventsError(err));
     });
@@ -54,7 +54,7 @@ export const fetchMyEvents = () => (dispatch, getState) => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(({data}) => dispatch(fetchMyEventsSuccess(data)))
+    .then(data => dispatch(fetchMyEventsSuccess(data)))
     .catch(err => {
         dispatch(fetchMyEventsError(err));
     });

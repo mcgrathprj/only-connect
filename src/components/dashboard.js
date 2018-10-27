@@ -7,7 +7,7 @@ import './dashboard.css';
 
 export class Dashboard extends React.Component {
     componentDidMount() {
-        this.props.dispatch(fetchAllEvents());
+//        this.props.dispatch(fetchAllEvents());
     }
 
     render() {
