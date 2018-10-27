@@ -5,6 +5,7 @@ import {clearAuthToken} from '../local-storage';
 import CreateEventForm from './create-event-form';
 import EventsList from './events-list';
 import MyEvents from './my-events';
+import {Link} from 'react-router-dom';
 
 import './header-bar.css';
 
@@ -26,9 +27,9 @@ export class HeaderBar extends React.Component {
             <div className="header-bar">
                 <span id="home-logo"><i className="fas fa-clipboard-list" onClick={() => this.GoHome()}></i></span>
                 <span id="nav-options">
-                    <a onClick={() => this.render(<CreateEventForm/>)}>Create an Event</a>|
-                    <a onClick={() => this.render(<EventsList/>)}>Browse Events</a>|
-                    <a onClick={() => this.render(<MyEvents/>)}>My Events</a>
+                    <Link to="/create">Create an Event</Link>|
+                    <Link to="/browse">Browse Events</Link>|
+                    <Link to="/myevents">My Events</Link>
                 </span>
                 {logOutButton}
             </div>

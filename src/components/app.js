@@ -10,6 +10,7 @@ import {refreshAuthToken} from '../actions/auth';
 import EventsList from './events-list';
 import EventDetail from './event-detail';
 import CreateEventForm from './create-event-form';
+import MyEvents from './my-events';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -48,6 +49,9 @@ export class App extends React.Component {
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/register" component={RegistrationPage} />
+                <Route exact path="/create" component={CreateEventForm} />
+                <Route exact path="/browse" component={EventsList} />
+                <Route exact path="/myevents" component={MyEvents} /> 
             </div>
         );
     }

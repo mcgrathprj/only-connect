@@ -52,7 +52,7 @@ export class CreateEventForm extends React.Component {
                 />
                 <label htmlFor="date">Date</label>
                 <DatePicker
-                    selected={this.state.date}
+                    selected={this.props.startDate}
                     onChange={this.handleChange}
                 />
 
@@ -94,7 +94,16 @@ export class CreateEventForm extends React.Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        startDate: state.events.startDate,
+        endDate: state.events.endDate
+    };
+};
+
 export default reduxForm({
     form: 'create-event',
     onSubmitFail: (errors, dispatch) => dispatch(focus('title', 'location', 'date', 'start_time', 'end_time', 'capacity'))
 })(CreateEventForm);
+
+
