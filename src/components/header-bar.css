@@ -28,3 +28,13 @@
   margin-right: 10px;
   margin-top: 10px
 }
+
+a:link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}

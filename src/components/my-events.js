@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchMyEvents} from '../actions/events';
+import {Link} from 'react-router-dom';
 
 class MyEvents extends React.Component {
     componentDidMount() {
@@ -10,7 +11,7 @@ class MyEvents extends React.Component {
 
     render() {
       const myEvents = this.props.events.map((event, index) => 
-        <li key={index}>{event.title}</li>
+        <li key={index}><Link to="/eventdetail">{event.title}</Link></li>
       )
 
       return (
