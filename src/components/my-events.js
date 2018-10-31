@@ -4,6 +4,8 @@ import requiresLogin from './requires-login';
 import {fetchMyEvents} from '../actions/events';
 import {Link} from 'react-router-dom';
 
+import './my-events.css';
+
 class MyEvents extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchMyEvents());

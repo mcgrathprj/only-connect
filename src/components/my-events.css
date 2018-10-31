@@ -1,0 +1,9 @@
+a:link {
+  color: #3F69AA;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3F69AA;
+  text-decoration: underline;
+}

@@ -64,7 +64,7 @@ export class CreateEventForm extends React.Component {
                     showTimeSelectOnly
                     timeIntervals={15}
                     dateFormat="LT"
-                    timeCaption="Time"
+                    timeCaption="Start"
                 />
 
                 <label htmlFor="end_time">End Time</label>
@@ -75,7 +75,7 @@ export class CreateEventForm extends React.Component {
                     showTimeSelectOnly
                     timeIntervals={15}
                     dateFormat="LT"
-                    timeCaption="Time"
+                    timeCaption="End"
                 />
 
                 <label htmlFor="capacity">Number of Volunteers Needed</label>
@@ -86,7 +86,9 @@ export class CreateEventForm extends React.Component {
                     id="capacity"
                     validate={[required, nonEmpty]}
                 />
-                <button disabled={this.props.pristine || this.props.submitting}>
+                <button 
+                    type="submit" 
+                    disabled={this.props.pristine || this.props.submitting}>
                     Create Event
                 </button>
             </form>
@@ -97,7 +99,8 @@ export class CreateEventForm extends React.Component {
 const mapStateToProps = state => {
     return {
         startDate: state.events.startDate,
-        endDate: state.events.endDate
+        startTimee: state.events.startTime,
+        endTime: state.events.endTime
     };
 };
 
@@ -105,5 +108,3 @@ export default reduxForm({
     form: 'create-event',
     onSubmitFail: (errors, dispatch) => dispatch(focus('title', 'location', 'date', 'start_time', 'end_time', 'capacity'))
 })(CreateEventForm);
-
-

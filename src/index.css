@@ -83,12 +83,3 @@ input {
 li {
   list-style: none;
 }
-
-a:link {
-  color: #0157ae;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
