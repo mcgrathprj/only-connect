@@ -4,7 +4,8 @@ import {
     FETCH_ALL_EVENTS_SUCCESS,
     FETCH_MY_EVENTS_SUCCESS,
     FETCH_ALL_EVENTS_ERROR,
-    FETCH_MY_EVENTS_ERROR
+    FETCH_MY_EVENTS_ERROR,
+    CHANGE_DATE
 } from '../actions/events';
 
 const initialState = {
@@ -36,6 +37,10 @@ export default function reducer(state = initialState, action) {
     } else if (action.type === FETCH_MY_EVENTS_ERROR) {
         return Object.assign({}, state, {
             error: action.error
+        });
+    } else if (action.type === CHANGE_DATE) {
+        return Object.assign({}, state, {
+            eventStartDate: action.date
         });
     }
 

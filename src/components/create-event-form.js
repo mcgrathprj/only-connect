@@ -5,9 +5,15 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import {changeDate} from '../actions/events';
+import {connect} from 'react-redux';
 
 export class CreateEventForm extends React.Component {
     onSubmit(values) {
+    }
+
+    handleDateChange(date) {
+        this.props.dispatch(changeDate(date))
     }
 
     render() {
@@ -53,13 +59,13 @@ export class CreateEventForm extends React.Component {
                 <label htmlFor="date">Date</label>
                 <DatePicker
                     selected={this.props.startDate}
-                    onChange={this.handleChange}
+                    onChange={this.handleDateChange}
                 />
 
                 <label htmlFor="start_time">Start Time</label>
                 <DatePicker
                     selected={this.props.startTime}
-                    onChange={this.handleChange}
+                    onChange={this.handleStartTimeChange}
                     showTimeSelect
                     showTimeSelectOnly
                     timeIntervals={15}
@@ -70,7 +76,7 @@ export class CreateEventForm extends React.Component {
                 <label htmlFor="end_time">End Time</label>
                 <DatePicker
                     selected={this.props.endTime}
-                    onChange={this.handleChange}
+                    onChange={this.handleEndTimeChange}
                     showTimeSelect
                     showTimeSelectOnly
                     timeIntervals={15}
@@ -107,4 +113,4 @@ const mapStateToProps = state => {
 export default reduxForm({
     form: 'create-event',
     onSubmitFail: (errors, dispatch) => dispatch(focus('title', 'location', 'date', 'start_time', 'end_time', 'capacity'))
-})(CreateEventForm);
+})(connect(mapStateToProps)(CreateEventForm));

@@ -16,7 +16,7 @@ nav {
   font-size: 300%;
 }
 
-header, h1, h2, h3, form {
+header, h1, h2, h3, .create-event-form {
   text-align: center;
 }
 
