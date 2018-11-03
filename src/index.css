@@ -5,7 +5,6 @@ body {
 
 nav {
   font-family: 'Fjalla One', sans-serif;
-  color: #FFFFFF;
   background-color: #3F69AA;
   padding-left: 10px;
   padding-top: 10px;
@@ -13,6 +12,7 @@ nav {
 }
 
 .fas {
+  color: #FFFFFF;
   font-size: 300%;
 }
 
