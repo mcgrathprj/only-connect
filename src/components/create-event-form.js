@@ -5,11 +5,26 @@ import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
-import {changeDate} from '../actions/events';
+import {changeDate, createEvent} from '../actions/events';
 import {connect} from 'react-redux';
 
 export class CreateEventForm extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            date: "",
+            startTime: "",
+            endTime: ""
+        };
+        this.handleDateChange = this.handleDateChange.bind(this);        
+    }
+
+
     onSubmit(values) {
+        values.date = this.state.date;
+        values.startTime = this.state.startTime;
+        values.endTime = this.state.endTime;
+        return this.props.dispatch(createEvent(values))
     }
 
     handleDateChange(date) {
@@ -58,13 +73,13 @@ export class CreateEventForm extends React.Component {
                 />
                 <label htmlFor="date">Date</label>
                 <DatePicker
-                    selected={this.props.startDate}
+                    selected={this.state.date}
                     onChange={this.handleDateChange}
                 />
 
                 <label htmlFor="start_time">Start Time</label>
                 <DatePicker
-                    selected={this.props.startTime}
+                    selected={this.state.startTime}
                     onChange={this.handleStartTimeChange}
                     showTimeSelect
                     showTimeSelectOnly
@@ -75,7 +90,7 @@ export class CreateEventForm extends React.Component {
 
                 <label htmlFor="end_time">End Time</label>
                 <DatePicker
-                    selected={this.props.endTime}
+                    selected={this.state.endTime}
                     onChange={this.handleEndTimeChange}
                     showTimeSelect
                     showTimeSelectOnly
@@ -105,7 +120,7 @@ export class CreateEventForm extends React.Component {
 const mapStateToProps = state => {
     return {
         startDate: state.events.startDate,
-        startTimee: state.events.startTime,
+        startTime: state.events.startTime,
         endTime: state.events.endTime
     };
 };
