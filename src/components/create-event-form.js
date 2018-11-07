@@ -9,26 +9,8 @@ import {changeDate, createEvent} from '../actions/events';
 import {connect} from 'react-redux';
 
 export class CreateEventForm extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            date: "",
-            startTime: "",
-            endTime: ""
-        };
-        this.handleDateChange = this.handleDateChange.bind(this);        
-    }
-
-
     onSubmit(values) {
-        values.date = this.state.date;
-        values.startTime = this.state.startTime;
-        values.endTime = this.state.endTime;
         return this.props.dispatch(createEvent(values))
-    }
-
-    handleDateChange(date) {
-        this.props.dispatch(changeDate(date))
     }
 
     render() {
@@ -61,7 +43,6 @@ export class CreateEventForm extends React.Component {
                     type="text"
                     name="description"
                     id="description"
-                    validate={[required, nonEmpty]}
                 />                
                 <label htmlFor="location">Location</label>
                 <Field
@@ -72,31 +53,30 @@ export class CreateEventForm extends React.Component {
                     validate={[required, nonEmpty]}
                 />
                 <label htmlFor="date">Date</label>
-                <DatePicker
-                    selected={this.state.date}
-                    onChange={this.handleDateChange}
+                <Field
+                    component={Input}
+                    type="date"
+                    name="date"
+                    id="date"
+                    validate={[required, nonEmpty]}
                 />
 
                 <label htmlFor="start_time">Start Time</label>
-                <DatePicker
-                    selected={this.state.startTime}
-                    onChange={this.handleStartTimeChange}
-                    showTimeSelect
-                    showTimeSelectOnly
-                    timeIntervals={15}
-                    dateFormat="LT"
-                    timeCaption="Start"
+                <Field
+                    component={Input}
+                    type="time"
+                    name="start_time"
+                    id="start_time"
+                    validate={[required, nonEmpty]}
                 />
 
                 <label htmlFor="end_time">End Time</label>
-                <DatePicker
-                    selected={this.state.endTime}
-                    onChange={this.handleEndTimeChange}
-                    showTimeSelect
-                    showTimeSelectOnly
-                    timeIntervals={15}
-                    dateFormat="LT"
-                    timeCaption="End"
+                <Field                    
+                    component={Input}
+                    type="time"
+                    name="end_time"
+                    id="end_time"
+                    validate={[required, nonEmpty]}
                 />
 
                 <label htmlFor="capacity">Number of Volunteers Needed</label>
