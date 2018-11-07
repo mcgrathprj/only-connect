@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchMyEvents} from '../actions/events';
 import {Link} from 'react-router-dom';
+import {loadCurrentEvent} from '../actions/events';
+import {withRouter} from 'react-router-dom';
 
 import './my-events.css';
 
@@ -11,9 +13,14 @@ class MyEvents extends React.Component {
         this.props.dispatch(fetchMyEvents());
     }
 
+    loadCurrentEvent(id) {
+      this.props.dispatch(loadCurrentEvent(id));
+      this.props.history.push("/eventdetail")
+    }
+
     render() {
       const myEvents = this.props.events.map((event, index) => 
-        <li key={index}><Link to="/eventdetail">{event.title}</Link></li>
+        <li key={index} onClick={index => this.loadCurrentEvent(index)}>{event.title}</li>
       )
 
       return (
@@ -29,4 +36,4 @@ const mapStateToProps = state => ({
   events: state.events.events
 })
 
-export default connect(mapStateToProps)(MyEvents)
+export default withRouter(connect(mapStateToProps)(MyEvents))

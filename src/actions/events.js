@@ -37,6 +37,13 @@ export const fetchMyEventsSuccess = data => ({
     data
 });
 
+export const LOAD_CURRENT_EVENT = 'LOAD_CURRENT_EVENT';
+export const loadCurrentEvent = data => ({
+    type: LOAD_CURRENT_EVENT,
+    data
+});
+
+
 export const FETCH_MY_EVENTS_ERROR = 'FETCH_MY_EVENTS_ERROR';
 export const fetchMyEventsError = error => ({
     type: FETCH_MY_EVENTS_ERROR,

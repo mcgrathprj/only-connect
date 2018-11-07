@@ -25,7 +25,7 @@ export class InteractionOptions extends React.Component {
         <i className="fa fa-trash" aria-hidden="true"></i>
         
     }
-    return ({icons})
+    return icons; 
   }
 }
 

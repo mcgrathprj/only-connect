@@ -51,7 +51,8 @@ export class App extends React.Component {
                 <Route exact path="/register" component={RegistrationPage} />
                 <Route exact path="/create" component={CreateEventForm} />
                 <Route exact path="/browse" component={EventsList} />
-                <Route exact path="/myevents" component={MyEvents} /> 
+                <Route exact path="/myevents" component={MyEvents} />
+                <Route exact path="/eventdetail" component={EventDetail} /> 
             </div>
         );
     }
