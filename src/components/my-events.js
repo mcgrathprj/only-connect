@@ -5,6 +5,7 @@ import {fetchMyEvents} from '../actions/events';
 import {Link} from 'react-router-dom';
 import {loadCurrentEvent} from '../actions/events';
 import {withRouter} from 'react-router-dom';
+import {InteractionOptions} from './interaction-options';
 
 import './my-events.css';
 
@@ -20,7 +21,7 @@ class MyEvents extends React.Component {
 
     render() {
       const myEvents = this.props.events.map((event, index) => 
-        <li key={index} onClick={index => this.loadCurrentEvent(index)}>{event.title}</li>
+        <li key={index} onClick={index => this.loadCurrentEvent(index)} className="event-line">{event.date}: {event.title} <InteractionOptions event="this.event" /></li>
       )
 
       return (
