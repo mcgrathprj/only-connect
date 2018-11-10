@@ -8,6 +8,8 @@ import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
 import {changeDate, createEvent} from '../actions/events';
 import {connect} from 'react-redux';
 
+import './create-event-form.css';
+
 export class CreateEventForm extends React.Component {
     onSubmit(values) {
         return this.props.dispatch(createEvent(values))
