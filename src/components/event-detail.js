@@ -2,8 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import InteractionOptions from './interaction-options';
+import {loadCurrentEvent} from '../actions/events'
 
 class EventDetail extends React.Component {
+
     render() {
         return (
             <div className="event-detail">
@@ -18,7 +20,7 @@ class EventDetail extends React.Component {
               <ul>
                 {this.props.event.attendees}
               </ul>
-              <InteractionOptions event={this.props.event} />
+              <InteractionOptions />
             </div>
         );
     }

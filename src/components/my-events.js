@@ -14,14 +14,14 @@ class MyEvents extends React.Component {
         this.props.dispatch(fetchMyEvents());
     }
 
-    loadCurrentEvent(id) {
-      this.props.dispatch(loadCurrentEvent(id));
+    loadCurrentEvent(currentEvent) {
+      this.props.dispatch(loadCurrentEvent(currentEvent));
       this.props.history.push("/eventdetail")
     }
 
     render() {
-      const myEvents = this.props.events.map((event, index) => 
-        <li key={index} onClick={index => this.loadCurrentEvent(index)} className="event-line">{event.date}: {event.title} <InteractionOptions event="this.event" /></li>
+      const myEvents = this.props.events.map((currentEvent, index) => 
+        <li key={index} onClick={() => this.loadCurrentEvent(currentEvent)} className="event-line">{currentEvent.date}: {currentEvent.title} <InteractionOptions event="this.event" /></li>
       )
 
       return (

@@ -45,7 +45,7 @@ export default function reducer(state = initialState, action) {
         });
     } else if (action.type === LOAD_CURRENT_EVENT) {
         return Object.assign({}, state, {
-            currentEvent: state.events[action.data]
+            currentEvent: action.data
         });
     }
 
