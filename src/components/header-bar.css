@@ -38,3 +38,8 @@ a:hover {
   color: #FFFFFF;
   text-decoration: underline;
 }
+
+a:visited {
+  color: #FFFFFF;
+  text-decoration: none; 
+}

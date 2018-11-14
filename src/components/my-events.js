@@ -20,8 +20,9 @@ class MyEvents extends React.Component {
     }
 
     render() {
+   //   console.log(typeof this.props.events[0].date);
       const myEvents = this.props.events.map((currentEvent, index) => 
-        <li key={index} onClick={() => this.loadCurrentEvent(currentEvent)} className="event-line">{currentEvent.date}: {currentEvent.title} <InteractionOptions event="this.event" /></li>
+        <li key={index} onClick={() => this.loadCurrentEvent(currentEvent)} className="event-line">{currentEvent.date.slice(0,10)}: {currentEvent.title} <InteractionOptions event="this.event" /></li>
       )
 
       return (
